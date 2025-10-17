@@ -1,2 +1,2 @@
-# AllPi3
-Right now, I am just making a template. Please be patient. More Pi-related codes coming soon!
+# Code-Samples
+This repository consists of a multitude of code samples, from simple to complex, big to small, cool to cooler, this repository will eventually be filled.

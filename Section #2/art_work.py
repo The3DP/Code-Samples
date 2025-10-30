@@ -1,1 +1,18 @@
+### art_work.py ######
+##------------------##
+## This is a simple ##
+## program which    ##
+## displays a       ##
+## short piece of   ##
+## art.             ##
+######################
 
+#Work in progress
+
+print()
+print()
+print()
+print()
+print()
+print()
+print()

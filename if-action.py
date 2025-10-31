@@ -1,16 +1,7 @@
-######### RIFLEMAN? ##########
-## Objective: Ask (user)    ##
-## are we going to watch    ##
-## Rifleman?                ##
-##--------------------------##
-## Answers accepted:        ##
-## Yes/No                   ##
-##==========================##
-## Else: Sorry, invalid     ##
-## answer.                  ##           
-##############################
-
-#CODE BELOW
-
-print("finish code tomorrow")
-#--
+#PASS_WD
+#
+#password_attempt = input("What is the password?")
+#
+#if password_attempt =
+#
+# Finish by 1/11/25

@@ -8,4 +8,5 @@ while n < 10:
     if n % 3 == 0:
         continue
     print(n)
+
 #NOTE: Will finish by 1/11/25

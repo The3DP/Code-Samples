@@ -5,5 +5,5 @@ for hours in range(0,24,1);
     for minutes in range (0, 60, 1):
     #    print("Just iterated minutes")
         for seconds in range (0, 60, 1):
-            printf'(hours):(minutes):(seconds)')
-            #===================================
+            printf'(hours):(minutes):(seconds)'
+#===============================================

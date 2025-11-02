@@ -4,7 +4,6 @@
 #################
 
 
-
 # Concentric circles
 import turtle
  

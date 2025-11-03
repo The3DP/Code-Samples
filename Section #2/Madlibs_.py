@@ -10,18 +10,24 @@
 
 NOUN = str(input("Please enter a noun): "))
 
+NOUN_2 = str(input("Please enter a second noun): "))
+
 ADJ = str(input("Please enter an adjective): "))
+
+ADJ_2 = str(input("Please enter a second adjective): "))
 
 VERB = str(input("Please enter a verb): "))
 
-NOUN_2 = str(input("Please enter a noun): "))
+COLOR = str(input("Think of one color, then enter it below): "))
 
 
 
 
 
 
-print (NOUN, VERB)
+
+
+print("Bill loves taking walks in the park!")
 
 print ("to play outside every")
 

@@ -21,4 +21,3 @@ print (NOUN, VERB)
 print ("to play outside every")
 
 print(ADJ, NOUN2)
-

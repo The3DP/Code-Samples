@@ -4,7 +4,7 @@
 ## is to create a fully functional 
 ## MAD LIBS game.
 ##
-## Hope you enjoy :)
+## NOTE: Work in progress
 ##
 ##############################################
 
@@ -14,7 +14,12 @@ ADJ = str(input("Please enter an adjective): "))
 
 VERB = str(input("Please enter a verb): "))
 
-NOUN2 = str(input("Please enter a noun): "))
+NOUN_2 = str(input("Please enter a noun): "))
+
+
+
+
+
 
 print (NOUN, VERB)
 

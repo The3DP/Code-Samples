@@ -1,5 +1,5 @@
 ##############################################
-##       MAD LIBS GAME
+##  SECOND MAD LIBS GAME
 ## The purpose of the following code
 ## is to create a fully functional 
 ## MAD LIBS game.

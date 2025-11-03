@@ -28,7 +28,8 @@ COLOR = str(input("Think of one color, then enter it below): "))
 
 
 print("Bill loves taking walks in the park!")
+print('''However, one unusual Saturday evening surprised Bill so much,
+     (that he was never the same again.''')
 
-print ("to play outside every")
-
-print(ADJ, NOUN2)
+print ("It was", NOUN, "outside the", NOUN_2)
+# Will continue later

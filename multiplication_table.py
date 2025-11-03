@@ -1,12 +1,12 @@
 ##################################################################
-# Daren Neyland                                                 ##
-# daren@markandtraci.com                                        ##
-# Intro to Python, Section 3                                    ##
+#                                                 ##
+#                                        ##
+#                                     ##
 # Version 1.0                                                   ##
-# section3-week10-daren-neyland-multiplication-table.py         ##
+#          ##
 # 9/4/2025                                                      ##
-# This program qill quickly access                              ##
-# how quickly a bucket will overflow.                           ##
+#                               ##
+#                            ##
 ##################################################################
 
 ##################### OBJECTIVE #################################

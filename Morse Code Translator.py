@@ -1,10 +1,14 @@
-## Morse Code Converter ##
-## Date created: 1/30/2026
+## Morse Code Converter ##============
+## Date started: 1/30/2026
 ## Goal: to create a self-working
 ## morse code (to English) translator
 ## using complete Python code.
 ##====================================
 
+#=====================================
+# NOTE: This program is still a work in progress.
+# Expected Finish Date: Next Saturday
+#=====================================
 A = ['A is:', '.-']
 B = ['B is:',  '-...']
 C = ['C is:', '-.-.']

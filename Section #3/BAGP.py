@@ -1,9 +1,10 @@
+#################################################
 ## Best (lichess.org) Atomic Games played
 ## (BAGP)
 ## Made: 1/4/2026
 ## OBJ: Include a list of longest played games. (not including games against official and unofficial bots)
 ## Example Username: Matirx
-## We will include Matirx's 5 biggest victories.
+## We will include Matirx's 5 longest games which resulted in victories.
 #################################################
 
 # Import time module

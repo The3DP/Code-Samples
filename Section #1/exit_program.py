@@ -56,3 +56,4 @@ def exit_program():
 def perform_task():
     """
     Simulates performing a task in the program after the user chooses to continue.
+    """

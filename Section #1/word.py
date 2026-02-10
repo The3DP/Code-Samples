@@ -15,5 +15,5 @@ def generate_wordsearch(grid_size, words):
             if direction == 'horizontal':
                 row = random.randint(0, grid_size - 1)
                 col = random.randint(0, grid_size - word_length)
-                if all(grid[row][col + i] == ' ' for i in range(word_length)):
-                    for i in range(word_length):
+                #if all(grid[row][col + i] == ' ' for i in range(word_length)):
+                    #for i in range(word_length):

@@ -9,4 +9,5 @@ battery = tello.get_battery()
 print(f"Battery level: {battery}%")
 tello.takeoff
 tello.rotate_clockwise(360)
-send_command("camera bottom")
+#send_command("camera bottom")
+#line 12 needs future editing

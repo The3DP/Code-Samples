@@ -10,10 +10,10 @@ LOCAL_PORT = 9000
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind(('', LOCAL_PORT))
 
-def send_command(command):
-    try:
-        sock.sendto(command.encode('utf-8'), (TELLO_IP, TELLO_PORT))
-        print(f"Sent command: {command}")
-
-        # Receive response from Tello
-        response, _ = sock.recvfrom(1024)
+#def send_command(command):
+#    try:
+#        sock.sendto(command.encode('utf-8'), (TELLO_IP, TELLO_PORT))
+#        print(f"Sent command: {command}")
+#
+#        # Receive response from Tello
+#        response, _ = sock.recvfrom(1024)

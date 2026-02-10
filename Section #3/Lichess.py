@@ -27,7 +27,7 @@ print("Closing down Lichess.py ... ")
 # NOTE: Be sure to put date       + DATE HERE: 1/6/2026         #
 # when database was last updated. + ----------------------------#
 #===============================================================#
-account = Matirx
+account = "Matirx"
 ##===-==-====----===
 #games_played = #fill
 ##===-==-====----===

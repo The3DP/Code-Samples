@@ -11,4 +11,4 @@
 #  time. sleep(5)
 print(if_tried) #will move this up
 print("The commented code shown above is only as an example")
-if_tried = '''When uncommented, GitHub will shoot back the following error: ")
+if_tried = '''When uncommented, GitHub will shoot back an error (unspecified) ")

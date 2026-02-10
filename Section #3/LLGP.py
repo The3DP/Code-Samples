@@ -13,7 +13,7 @@ import time
 ### Variable Bank ###
 username = "Matirx"
 games_number = 5
-opponent1 = hendraraira
+opponent1 = "hendraraira"
 o_rating1 = 1329 #apply this to later updates
 moves1 = 49 #apply this to later updates
 variant1 = "Atomic" #apply this to later updates

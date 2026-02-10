@@ -1,14 +1,11 @@
-#functions
+# Get user input
+number1 = int(input("Enter a number: "))
+number2 = int(input("Enter a second number: "))
 
+def add(num1, num2):
+    """Add two numbers and return the result."""
+    return num1 + num2
 
-varible1 = input ("enter a number")
-varible2 = input ("enter a second number")
-
-def add(varible1, varible2) :
-
-output = varible1 + varible2
-
-return output
-
-#call the function
-add (varible1, varible2)
+# Call the function and display the result
+result = add(number1, number2)
+print(f"The sum of {number1} and {number2} is {result}")

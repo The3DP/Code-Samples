@@ -12,13 +12,8 @@ import time
 ### Variable Table ###
 username = "Matirx"
 games_number = 5
-opponent1 = 
-rating1 =
-opponent2 =
-rating2 =
-opponent3 =
-rating3
-opponent4 =
+
+opponent4 = 
 rating4 =
 opponent5 =
 rating5 = 
@@ -27,7 +22,7 @@ print("NOTE: Shows victories in this order: largest to smallest")
 time.sleep(0.2)
 print(" ...")
 time.sleep(0.3)
-print("Displaying", number1, "biggest victories for:", username)
+print("Displaying", games_number, "biggest victories for:", username)
 
 print("Victory #1 was against", opponent1, "Their rating was", rating1)
 
@@ -38,3 +33,11 @@ print("Victory #3 was against", opponent3, "Their rating was", rating3)
 print("Victory #4 was against", opponent4, "Their rating was", rating4)
 
 print("Victory #5 was against", opponent5, "Their rating was", rating5)
+
+## Archived information
+#opponent1 = skywalker_luke_be
+#rating1 = "1686? (provisional)"
+#opponent2 = C4LTom
+#rating2 = "2203? (provisional)"
+#opponent3 = "Knezwolf"
+#rating3 = "1874? (provisional)"

@@ -3,7 +3,7 @@
 # We can use so much as one character to represent a variable.
 # This file was added 2/10/2026 (Februrary 10th, 2026)
 # Data (A to I) collected via random calculations using Casio fx-300ES PLUS
-# Data (J to M) collected via random calculations using TI-30XIIS 
+# Data (J to N) collected via random calculations using TI-30XIIS 
 #===========================================================================
 # Variable #1
 A = 362880
@@ -42,5 +42,8 @@ K = '-2.00123169'
 L = '0.406349206'
 
 # Variable #13
-M = 
+M = 54145.54736
+
+# Variable #14
+N = 789
 

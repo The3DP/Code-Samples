@@ -12,16 +12,16 @@ import time
 ### Variable Table ###
 username = "Matirx"
 games_number = 5
-#opponent1 = 
-#rating1 =
-#opponent2 =
-#rating2 =
-#opponent3 =
-#rating3
-#opponent4 =
-#rating4 =
-#opponent5 =
-#rating5 = 
+opponent1 = 
+rating1 =
+opponent2 =
+rating2 =
+opponent3 =
+rating3
+opponent4 =
+rating4 =
+opponent5 =
+rating5 = 
 
 print("NOTE: Shows victories in this order: largest to smallest")
 time.sleep(0.2)

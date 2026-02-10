@@ -29,11 +29,11 @@ print("Closing down Lichess.py ... ")
 #===============================================================#
 account = Matirx
 ##===-==-====----===
-games_played = #fill
+#games_played = #fill
 ##===-==-====----===
-games_won = #fill
+#games_won = #fill
 ##===-==-====----===
-games_lost = #fill
+#games_lost = #fill
 ##===-==-====----===
 
 

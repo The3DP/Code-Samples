@@ -18,3 +18,13 @@ zoo_schedule = {
 explanation = "Multi-word dictionary example below generated using Google Gemini"
 print(explanation)
 print(zoo_schedule)
+
+## Gemini Improvement Reort (GIR)
+## --
+## Variable Definition: Removed the hash so zoo_schedule is recognized as a variable rather than a comment.
+## --
+## Indentation: Applied a 4-space indent for every line inside the dictionary.
+## --
+## Spacing: Added a space after every colon for better readability.
+## --
+## Closing Bracket: Placed the closing } on its own line, aligned with the start of the variable.

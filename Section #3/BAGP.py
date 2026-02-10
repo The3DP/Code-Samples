@@ -6,8 +6,8 @@
 ## We will include Matirx's 5 biggest victories.
 #################################################
 
-import time
 # Import time module
+import time
 
 ### Variable Table ###
 username = "Matirx"

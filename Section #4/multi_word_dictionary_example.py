@@ -1,4 +1,4 @@
-#zoo_schedule = {
+zoo_schedule = {
     101: {"animal": "Zebras", "diet": "Grass", "time": "0730"},
     102: {"animal": "Elephants", "diet": "Vegetables", "time": "0900"},
     103: {"animal": "Geese", "diet": "Worms", "time": "0845"},

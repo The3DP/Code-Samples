@@ -9,7 +9,7 @@
 # Import time module
 import time
 
-### Variable Table ###
+### Variable Bank ###
 username = "Matirx"
 games_number = 5
 opponent1 = hendraraira
@@ -24,12 +24,15 @@ opponent3 = "Lemonwola"
 o_rating3 = 1735
 moves3 = 45
 variant3 = "Atomic"
-opponent4 = 
-# - fill in details for future use here -
-o_rating4 =
-opponent5 =
-# - fill in details for future use here -
-o_rating5 = 
+opponent4 = "mahatma09"
+o_rating4 = 1901
+moves4 = 44
+variant4 = "Standard"
+opponent5 = "C4LTom"
+o_rating5 = "2203? (provisional)"
+moves5 = 43
+variant5 = "Horde"
+#####################
 
 print("NOTE: Shows victories in this order: largest to smallest")
 time.sleep(0.2)
@@ -54,3 +57,4 @@ print("Victory #5 was against", opponent5, "Their rating was", o_rating5)
 #rating2 = "2203? (provisional)"
 #opponent3 = "Knezwolf"
 #rating3 = "1874? (provisional)"
+## ====================

@@ -14,14 +14,22 @@ username = "Matirx"
 games_number = 5
 opponent1 = hendraraira
 o_rating1 = 1329 #apply this to later updates
-moves = 49 #apply this to later updates
-variant = "Atomic" #apply this to later updates
+moves1 = 49 #apply this to later updates
+variant1 = "Atomic" #apply this to later updates
 opponent2 = "USAChamp"
-o_rating = "1500? (provisional
+o_rating2 = "1500? (provisional)"
+moves2 = 46
+variant2 = "Horde"
+opponent3 = "Lemonwola"
+o_rating3 = 1735
+moves3 = 45
+variant3 = "Atomic"
 opponent4 = 
-rating4 =
+# - fill in details for future use here -
+o_rating4 =
 opponent5 =
-rating5 = 
+# - fill in details for future use here -
+o_rating5 = 
 
 print("NOTE: Shows victories in this order: largest to smallest")
 time.sleep(0.2)
@@ -29,15 +37,15 @@ print(" ...")
 time.sleep(0.3)
 print("Displaying", games_number, "longest victories for:", username)
 
-print("Victory #1 was against", opponent1, "Their rating was", rating1)
+print("Victory #1 was against", opponent1, "Their rating was", o_rating1)
 
-print("Victory #2 was against", opponent2, "Their rating was", rating2)
+print("Victory #2 was against", opponent2, "Their rating was", o_rating2)
 
-print("Victory #3 was against", opponent3, "Their rating was", rating3)
+print("Victory #3 was against", opponent3, "Their rating was", o_rating3)
 
-print("Victory #4 was against", opponent4, "Their rating was", rating4)
+print("Victory #4 was against", opponent4, "Their rating was", o_rating4)
 
-print("Victory #5 was against", opponent5, "Their rating was", rating5)
+print("Victory #5 was against", opponent5, "Their rating was", o_rating5)
 
 ## Archived information
 #opponent1 = skywalker_luke_be

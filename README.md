@@ -5,4 +5,5 @@ This repository consists of a multitude of code samples. Varieties of these trav
 
 ### *Progress:*
 ![100% Complete](https://img.shields.io/badge/Progress-100%25-darkgreen)
+
 However, additional files and improvements never fail in number :)

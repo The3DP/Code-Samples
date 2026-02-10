@@ -10,6 +10,5 @@ output = varible1 + varible2
 
 return output
 
-
 #call the function
 add (varible1, varible2)

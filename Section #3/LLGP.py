@@ -1,5 +1,5 @@
 ##################################################################################################
-## Best (lichess.org) Atomic Games played
+## longest Lichess (lichess.org) Games played
 ## (BAGP)
 ## Made: 1/4/2026
 ## OBJ: Include a list of longest played games. (not including games against official and unofficial bots)

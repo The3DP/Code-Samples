@@ -1,3 +1,8 @@
+###### Below is a decent-sized collection of high definition'.jpeg' photos (used mainly for Github Pages speed testing).
+###### If you'd like to view the description (as well as additional '.jpeg' links)
+###### for this repository, then head over to the 'Others' folder. Thank you! :)
+
+
 ![IMG_1049](https://github.com/user-attachments/assets/83ae47e9-61a1-437b-856d-05b8c344f401)
 ![IMG_0111](https://github.com/user-attachments/assets/612cc24e-6af3-4296-a18c-a8c85bf55012)
 ![IMG_0137](https://github.com/user-attachments/assets/f2fe0229-37f5-41d1-86f2-ad400f46080e)
@@ -8,4 +13,3 @@
 ![IMG_1093](https://github.com/user-attachments/assets/ad4fa8a9-e717-47e9-aba3-d0f412e62c32)
 ![IMG_1141](https://github.com/user-attachments/assets/5a13c9fa-3908-4bdb-b1da-d3a7e694a45f)
 ![IMG_1128](https://github.com/user-attachments/assets/6cb8ae91-ca7c-4ec4-bcdf-36f437ba9bb2)
-

@@ -1,13 +1,11 @@
-##################################################################
-# Daren Neyland                                                 ##
-# daren@markandtraci.com                                        ##
-# Intro to Python, Section 3                                    ##
-# Version 1.0                                                   ##
-# section3-week10-daren-neyland-multiplication-table.py         ##
-# 9/4/2025                                                      ##
-# This program qill quickly access                              ##
-# how quickly a bucket will overflow.                           ##
-##################################################################
+###################################################################
+## The3DP                                                        ##
+##                                                               ##                                                              
+## d73928430@gmail.com                                           ##
+##                                                               ##
+##  Date made:                                                   ##
+##  9/4/2025                                                     ##                                                                                                                                                                                     
+###################################################################
 
 ##################### OBJECTIVE #################################
 ## Write a program that uses nested loops to print

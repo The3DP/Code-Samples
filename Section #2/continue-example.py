@@ -1,0 +1,12 @@
+### continue-example.py ###
+#The3DP: 10/30/25         #
+#=========================#
+
+n = 0
+while n < 10:
+    n += 1
+    if n % 3 == 0:
+        continue
+    print(n)
+
+# Uses the 'continue' statement

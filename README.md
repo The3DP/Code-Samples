@@ -29,3 +29,8 @@ for this repository, then head over to the `Others` folder.
 ![IMG_1777](https://github.com/user-attachments/assets/215d9585-9eac-4aa2-864d-7e802333b01e)
 ![IMG_1800](https://github.com/user-attachments/assets/a6188538-1f6c-4579-8f0a-6194dceb2c6e)
 ![IMG_1771](https://github.com/user-attachments/assets/8028969a-d00b-4507-8825-815690198c1c)
+![IMG_1770](https://github.com/user-attachments/assets/08bbe3f6-bd6d-4004-8700-91f8568e74a2)
+![IMG_1776](https://github.com/user-attachments/assets/521157bd-7ce3-4d3a-8b01-abf2d54cca33)
+![IMG_1775](https://github.com/user-attachments/assets/5b00f64f-9b09-46aa-960c-2bc89b509e05)
+![IMG_1774](https://github.com/user-attachments/assets/a9946210-9ea8-403f-9cc9-f71e15cac263)
+![IMG_1784](https://github.com/user-attachments/assets/3c7d0e13-3998-41fe-8d96-bc6a243d9bd3)

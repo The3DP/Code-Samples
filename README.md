@@ -2,7 +2,12 @@
 ###### If you'd like to view the description (as well as additional '.jpeg' links)
 ###### for this repository, then head over to the 'Others' folder. Thank you! :)
 
-
+![IMG_1849](https://github.com/user-attachments/assets/6d5ce77f-5e0e-4289-9675-72cf24a4fb0e)
+![IMG_1848](https://github.com/user-attachments/assets/cd6f9f22-c35d-4882-9f68-b77d78925e94)
+![IMG_1847](https://github.com/user-attachments/assets/e126b48f-07bf-4712-97c3-643744c4612b)
+![IMG_1890](https://github.com/user-attachments/assets/81f44955-1c4d-4801-81af-3fb74b45f272)
+![IMG_1889](https://github.com/user-attachments/assets/d24b4e20-d657-4353-872f-7b0380a53f03)
+![IMG_1846](https://github.com/user-attachments/assets/c96e0cbd-274b-44a8-b6fe-2c86040a7ea2)
 ![IMG_1049](https://github.com/user-attachments/assets/83ae47e9-61a1-437b-856d-05b8c344f401)
 ![IMG_0111](https://github.com/user-attachments/assets/612cc24e-6af3-4296-a18c-a8c85bf55012)
 ![IMG_0137](https://github.com/user-attachments/assets/f2fe0229-37f5-41d1-86f2-ad400f46080e)

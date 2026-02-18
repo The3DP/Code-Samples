@@ -10,5 +10,5 @@
 
 var_ible = True
 
-while var_ible = True:
+while var_ible == True:
   print("This is a overloading example of a while loop")

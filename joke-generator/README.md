@@ -1,8 +1,29 @@
-# 😄 Random Joke Generator
+# 😄 Enhanced Random Joke Generator
 
-A complete, production-ready joke generator that fetches random jokes from an external API (JokeAPI). Includes implementations in Python and JavaScript with a beautiful web UI.
+A complete, production-ready joke generator with **Favorites**, **Dark Mode**, and **Copy to Clipboard** features! Includes implementations in Python and JavaScript with a beautiful responsive web UI.
 
-## 📋 Features
+## ✨ New Features Added
+
+### 🌙 Dark Mode
+- Toggle between light and dark themes
+- Preference saved to browser (localStorage)
+- Beautiful color transitions
+- Fully responsive design
+
+### ⭐ Favorites System
+- Save jokes you love
+- View all favorite jokes in a modal
+- Manage favorites (copy, delete)
+- Favorites persist in local storage (web) or JSON file (Python)
+- Visual indicator for favorited jokes
+
+### 📋 Copy to Clipboard
+- One-click copy jokes to clipboard
+- Smooth visual feedback
+- Works with full two-part jokes (setup + punchline)
+- Toast notification on successful copy
+
+## 📋 Features Overview
 
 ✨ **Multiple Implementations**
 - Python CLI with interactive menu
@@ -21,10 +42,16 @@ A complete, production-ready joke generator that fetches random jokes from an ex
 - Graceful failure messages
 
 🎨 **Beautiful UI**
-- Gradient design
-- Smooth animations
+- Gradient design with smooth transitions
+- Dark mode support
 - Mobile responsive
 - Punchline reveal functionality
+- Action buttons for favorites and copy
+
+📱 **Data Persistence**
+- Browser localStorage for web UI
+- JSON file storage for Python CLI
+- Automatic preference saving
 
 📡 **External API Integration**
 - Uses [JokeAPI](https://jokeapi.dev/)
@@ -47,9 +74,11 @@ python joke_generator.py
 
 **Features:**
 - Interactive menu system
+- Save favorite jokes to file
+- View all favorites
+- Clear favorites
 - Press Enter to reveal punchlines
 - Safe mode enabled by default
-- Session management with connection pooling
 
 ### Web UI
 
@@ -57,21 +86,25 @@ python joke_generator.py
 Simply open `joke_generator.html` in any modern web browser!
 
 **Features:**
-- Click "Get a Joke" to fetch a random joke
-- Select joke type from dropdown
-- Press Enter key as shortcut
-- Automatic punchline reveal button for two-part jokes
+- Click "Get a Joke" to fetch
+- Toggle dark mode (🌙)
+- View favorites (⭐)
+- Copy jokes (📋)
+- Add to favorites (🤍)
+- All preferences saved automatically
 
 ### JavaScript Module
 
 **Usage:**
 ```javascript
 const generator = new JokeGeneratorUI();
-generator.init(); // Initialize event listeners
+generator.init(); // Initialize with all features
 
-// Or fetch directly
-const joke = await generator.fetchJoke("programming", true);
-generator.displayJoke(joke);
+// All features available through the UI:
+// - Dark mode toggle
+// - Favorites management
+// - Copy to clipboard
+// - Punchline reveal
 ```
 
 ## 📚 API Reference
@@ -109,47 +142,66 @@ GET https://v2.jokeapi.dev/joke/programming?safe-mode=true
 
 ## 💻 Code Examples
 
-### Python - Simple Usage
+### Python - Using Favorites
 
 ```python
-from joke_generator import JokeGenerator
+from joke_generator import EnhancedJokeGenerator
 
-# Create instance
-gen = JokeGenerator()
+gen = EnhancedJokeGenerator()
 
-# Fetch and display a joke
+# Fetch a joke
 joke = gen.get_joke("programming", safe_mode=True)
-if joke:
-    gen.display_joke(joke)
+gen.display_joke(joke)
+
+# Save to favorites
+gen.save_favorite(joke)
+
+# View all favorites
+gen.view_favorites()
+
+# Remove a favorite
+gen.remove_favorite(0)
 ```
 
-### Python - Custom Implementation
-
-```python
-from joke_generator import JokeGenerator
-
-gen = JokeGenerator(timeout=15)
-joke_data = gen.get_joke("knock-knock")
-
-if joke_data["type"] == "twopart":
-    print(joke_data["setup"])
-    input("Press Enter for the punchline...")
-    print(joke_data["delivery"])
-```
-
-### JavaScript - Fetch Joke
+### JavaScript - Access Favorites
 
 ```javascript
-const ui = new JokeGeneratorUI();
+const generator = new JokeGeneratorUI();
+generator.init();
 
-// Fetch a programming joke
-const joke = await ui.fetchJoke("programming", true);
+// Add current joke to favorites
+generator.toggleFavorite();
 
-// Display it
-ui.displayJoke(joke);
+// Open favorites modal
+generator.openFavoritesModal();
+
+// Copy joke to clipboard
+await generator.copyJokeToClipboard();
 ```
 
-## 🔧 Customization
+### JavaScript - Dark Mode
+
+```javascript
+// Toggle dark mode
+generator.toggleDarkMode();
+
+// Check current mode
+console.log(generator.darkMode);
+```
+
+## 🎨 Customization
+
+### Change Colors
+
+**CSS Variables in HTML:**
+```css
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-primary: #ffffff;
+    --text-primary: #333333;
+    --accent-color: #667eea;
+}
+```
 
 ### Change API Endpoint
 
@@ -175,44 +227,48 @@ joke = generator.get_joke("any", safe_mode=False)
 const joke = await generator.fetchJoke("any", false);
 ```
 
-### Adjust Timeout
+## 📂 File Structure
 
-**Python:**
-```python
-generator = JokeGenerator(timeout=20)
 ```
-
-**JavaScript:**
-```javascript
-generator.timeout = 20000; // milliseconds
+joke-generator/
+├── joke_generator.py       # Python CLI with favorites
+├── joke_generator.js       # JavaScript module (enhanced)
+├── joke_generator.html     # Web UI with dark mode
+└── README.md              # Documentation
 ```
 
 ## 🌟 Future Enhancements
 
-- [ ] Save favorite jokes to local storage
+- [ ] Export favorites as CSV/JSON
 - [ ] Share jokes on social media
-- [ ] Rate jokes (like/dislike)
-- [ ] Search by keyword
+- [ ] Joke rating system (1-5 stars)
+- [ ] Search favorites by keyword
 - [ ] Multiple language support
-- [ ] Daily joke email notifications
-- [ ] Dark mode toggle
-- [ ] Accessibility improvements (WCAG 2.1)
-
-## 📝 File Structure
-
-```
-joke-generator/
-├── joke_generator.py       # Python CLI implementation
-├── joke_generator.js       # JavaScript module
-├── joke_generator.html     # Web UI
-└── README.md              # Documentation
-```
+- [ ] Voice/Text-to-Speech
+- [ ] Joke categories in modal
+- [ ] Shuffle favorites mode
+- [ ] Service Worker for offline support
+- [ ] Unit tests and coverage
 
 ## 🔗 Resources
 
 - [JokeAPI Documentation](https://jokeapi.dev/)
 - [Python Requests Library](https://requests.readthedocs.io/)
 - [MDN Web Docs - Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [MDN Web Docs - localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+## 💾 Data Storage
+
+### Web UI (Browser)
+- Favorites stored in `localStorage` (browser-specific, persists across sessions)
+- Dark mode preference also in `localStorage`
+- No server connection required
+- Private to your browser
+
+### Python CLI
+- Favorites stored in `joke_favorites.json` in the application directory
+- Human-readable JSON format
+- Can be shared or backed up easily
 
 ## 📄 License
 
@@ -225,3 +281,6 @@ Feel free to fork, modify, and use this project as you wish. Suggestions for imp
 ---
 
 **Made with ❤️ for the developer community**
+
+*Last Updated: 2026-05-14*
+*Version: 2.0 (Enhanced)*

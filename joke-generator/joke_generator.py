@@ -1,19 +1,21 @@
 """
-Random Joke Generator using JokeAPI
+Random Joke Generator using JokeAPI - Enhanced Edition
+Features: Favorites system with persistence
 A simple yet powerful joke generator that fetches jokes from an external API.
 Supports multiple joke types and provides a clean, interactive CLI experience.
 """
 
 import requests
 import json
-from typing import Dict, Optional
+import os
+from typing import Dict, Optional, List
 import sys
 
 
 class JokeGenerator:
     """
     A class to generate random jokes using the JokeAPI.
-    Provides methods to fetch and display jokes in various formats.
+    Provides methods to fetch, display, and save favorite jokes.
     """
 
     BASE_URL = "https://v2.jokeapi.dev/joke"
@@ -23,6 +25,7 @@ class JokeGenerator:
         "programming": "Programming",
         "knock-knock": "Knock-Knock"
     }
+    FAVORITES_FILE = "joke_favorites.json"
 
     def __init__(self, timeout: int = 10):
         """
@@ -33,6 +36,7 @@ class JokeGenerator:
         """
         self.timeout = timeout
         self.session = requests.Session()
+        self.favorites = self.load_favorites()
 
     def get_joke(self, joke_type: str = "any", safe_mode: bool = True) -> Optional[Dict]:
         """
@@ -101,54 +105,165 @@ class JokeGenerator:
 
         print("=" * 60 + "\n")
 
+    def get_joke_text(self, joke_data: Dict) -> str:
+        """
+        Get the full joke text as a string.
+
+        Args:
+            joke_data (Dict): Joke data from the API
+
+        Returns:
+            str: The complete joke text
+        """
+        if joke_data["type"] == "single":
+            return joke_data["joke"]
+        else:
+            return f"{joke_data['setup']}\n{joke_data['delivery']}"
+
+    def add_favorite(self, joke_data: Dict) -> None:
+        """
+        Add a joke to favorites.
+
+        Args:
+            joke_data (Dict): Joke data to add
+        """
+        joke_text = self.get_joke_text(joke_data)
+        
+        # Check if already in favorites
+        if any(fav["text"] == joke_text for fav in self.favorites):
+            print("✓ Already in favorites!")
+            return
+
+        self.favorites.append({
+            "text": joke_text,
+            "type": joke_data.get("type", "unknown")
+        })
+        self.save_favorites()
+        print("⭐ Added to favorites!")
+
+    def load_favorites(self) -> List[Dict]:
+        """
+        Load favorites from JSON file.
+
+        Returns:
+            List[Dict]: List of favorite jokes
+        """
+        if os.path.exists(self.FAVORITES_FILE):
+            try:
+                with open(self.FAVORITES_FILE, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except (json.JSONDecodeError, IOError):
+                return []
+        return []
+
+    def save_favorites(self) -> None:
+        """Save favorites to JSON file."""
+        try:
+            with open(self.FAVORITES_FILE, "w", encoding="utf-8") as f:
+                json.dump(self.favorites, f, indent=2, ensure_ascii=False)
+        except IOError as e:
+            print(f"Error saving favorites: {e}")
+
+    def view_favorites(self) -> None:
+        """Display all favorite jokes."""
+        if not self.favorites:
+            print("\n" + "=" * 60)
+            print("📭 No Favorites Yet!")
+            print("=" * 60)
+            print("\nStart adding jokes to your favorites to see them here.\n")
+            return
+
+        print("\n" + "=" * 60)
+        print("⭐ MY FAVORITE JOKES ⭐")
+        print("=" * 60)
+
+        for idx, favorite in enumerate(self.favorites, 1):
+            print(f"\n{idx}. {favorite['text']}\n")
+            print("-" * 60)
+
+    def clear_favorites(self) -> None:
+        """Clear all favorite jokes with confirmation."""
+        if not self.favorites:
+            print("No favorites to clear.")
+            return
+
+        confirm = input("⚠️  Are you sure? This will delete all favorites. (yes/no): ").strip().lower()
+        if confirm == "yes":
+            self.favorites = []
+            self.save_favorites()
+            print("✓ All favorites cleared!")
+        else:
+            print("Cancelled.")
+
     def interactive_menu(self) -> None:
         """Display an interactive menu for selecting and fetching jokes."""
         while True:
             print("\n🎪 RANDOM JOKE GENERATOR 🎪")
             print("-" * 40)
-            print("Select a joke type:")
+            print("Select an option:")
             print()
-
-            for idx, (key, display_name) in enumerate(self.JOKE_TYPES.items(), 1):
-                print(f"  {idx}. {display_name}")
-
-            print(f"  {len(self.JOKE_TYPES) + 1}. Exit")
+            print("  1. Get a Joke")
+            print("  2. View Favorites")
+            print("  3. Clear Favorites")
+            print("  4. Exit")
             print()
 
             try:
-                choice = input("Enter your choice (1-5): ").strip()
+                choice = input("Enter your choice (1-4): ").strip()
 
-                if choice == str(len(self.JOKE_TYPES) + 1):
+                if choice == "1":
+                    self.get_joke_menu()
+                elif choice == "2":
+                    self.view_favorites()
+                elif choice == "3":
+                    self.clear_favorites()
+                elif choice == "4":
                     print("\n👋 Thanks for laughing with us! Goodbye!\n")
                     break
-
-                if choice not in ["1", "2", "3", "4"]:
+                else:
                     print("Invalid choice. Please try again.")
-                    continue
-
-                joke_type_list = list(self.JOKE_TYPES.keys())
-                selected_type = joke_type_list[int(choice) - 1]
-
-                print("\n📡 Fetching your joke...")
-                joke_data = self.get_joke(selected_type, safe_mode=True)
-
-                if joke_data:
-                    self.display_joke(joke_data)
-
-                another = (
-                    input("Would you like another joke? (y/n): ")
-                    .strip()
-                    .lower()
-                )
-                if another != "y":
-                    print("\n👋 Thanks for laughing with us! Goodbye!\n")
-                    break
 
             except KeyboardInterrupt:
                 print("\n\n👋 Goodbye!\n")
                 break
             except Exception as e:
                 print(f"An error occurred: {e}")
+
+    def get_joke_menu(self) -> None:
+        """Display menu for getting a joke."""
+        print("\nSelect a joke type:")
+        print()
+
+        for idx, (key, display_name) in enumerate(self.JOKE_TYPES.items(), 1):
+            print(f"  {idx}. {display_name}")
+
+        print()
+
+        try:
+            choice = input("Enter your choice (1-4): ").strip()
+
+            if choice not in ["1", "2", "3", "4"]:
+                print("Invalid choice. Please try again.")
+                return
+
+            joke_type_list = list(self.JOKE_TYPES.keys())
+            selected_type = joke_type_list[int(choice) - 1]
+
+            print("\n📡 Fetching your joke...")
+            joke_data = self.get_joke(selected_type, safe_mode=True)
+
+            if joke_data:
+                self.display_joke(joke_data)
+
+                # Ask to save to favorites
+                save = input("Would you like to save this to favorites? (y/n): ").strip().lower()
+                if save == "y":
+                    self.add_favorite(joke_data)
+
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
 
 def main():
